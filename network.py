@@ -53,6 +53,8 @@ class network_sock:
         #if this is the master object, the client socket connection should be used to 
         #receive message_size chars
         if self.master:
+            if self.clientsock is None:
+                self.clientsock, self.clientaddr = self.sock.accept()
             msg = self.clientsock.recv(self.message_size)
         #otherwise receive data with the socket object
         else:
