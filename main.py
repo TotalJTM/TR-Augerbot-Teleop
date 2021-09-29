@@ -10,7 +10,7 @@ from _thread import *
 import threading
 
 #host socket IP address and port
-host_ip = '192.168.1.'
+host_ip = '192.168.0.103'
 server_port = 12345
 #determines whether socket tries to re-establish connection if lost
 autoreconnect_socket = True
